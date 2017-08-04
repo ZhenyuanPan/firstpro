@@ -1,0 +1,185 @@
+#reg-new{
+    background: url("../img/doubanapp5_bg.png")no-repeat #edf4ed;/*调整背景图片位置,一条bg写完否则覆盖*/
+    background-position: calc(50% - 305px) top;/*x轴计算移动百分之50-305px*/
+    margin-bottom: 25px;
+    height: 180px;
+}
+#wrapper{
+    width: 950px;
+    height: 180px;
+    margin: 0 auto;
+    position: relative;
+    background: url("../img/iphoneapp.png")no-repeat ;
+    background-position: 0 -150px;
+}
+#app{
+    position: absolute;
+    height: 120px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0 auto 430px;/*有问题*/
+}
+.a-title{
+    font-size: 25px;
+    color: #111;
+    line-height: 24px;
+    margin: 7px 0;
+}
+.a-slogan{
+    letter-spacing: 2px;
+    margin:0 0 18px 0;
+    font-size: 12px;
+}
+.a-button{
+    display: inline-block;
+    background-color: #00b51d;
+    color: #fff;
+    padding: 9px 21px;
+    margin-right: 2px;
+    border-radius: 3px;
+    font-size: 12px;
+    line-height: 1;
+}
+.a-r{
+    display: inline-block;
+    border: 1px solid #48aa0d;/*标签属性一次写完不然容易出错*/
+    border-radius: 2px;
+    vertical-align: top;  /*解决文字图片的对齐*/
+}
+input{
+    outline: none;
+}
+#reg-new .login-form{
+    width: 272px;
+    position: absolute;
+    top: 32px;
+    right: 0;
+}
+#reg-new .login-form p{
+    height: 32px;
+    margin: 5px auto;
+}
+#reg-new .email, #reg-new .password{
+    border: 0;
+    width: 100%;
+    height: 32px;
+    line-height: 32px;/*为了垂直居中*/
+    text-indent: 7px;
+}
+#reg-new .password{
+    width: 220px;
+}
+#reg-new .help{
+}
+#reg-new .login-form .bg-fff{
+    border: 1px solid #dbe5db;
+    background: #ffffff;
+}
+/*组件可以套用 begin*/
+.btn{
+    width: 132px;
+    border: 0;
+    color: #ffffff;
+    padding: 7px 0;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.btn:hover{
+    opacity: 0.8;
+    filter: alpha(opacity:80);/*兼容ie*/
+}
+.btn.login{
+    background: #2a8c70;
+}
+.btn.register{
+    border: 1px solid#2a8c70;
+    color: #2a8c70;
+    background: #edf3ed;
+    padding: 6px 0;
+}
+#reg-new .other-login{
+    float: right;
+}
+#reg-new .other-login li{
+    float: left;
+    width: 14px;
+    height: 12px;
+    margin-right: 5px;
+}
+#reg-new .other-login img{
+    width: 14px;
+    height: 12px;
+}
+#reg-new .remeber-me{
+    float: left;
+}
+/*reg-new end*/
+/*content begin*/
+#content .des-picture{
+    position: absolute;
+}
+#content .des{
+    color: #ffffff;
+    position: absolute;
+    line-height: 1;
+    text-align: center;
+    padding: 4px;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.298039);
+    margin-top: 66px;
+}
+#content .hot-topic {
+    font: 15px Arial, Helvetica, sans-serif;
+    color: #072;
+    line-height: 150%;
+}
+#content .htp-p{
+    float: left;
+    width: 360px;
+    margin-right: 30px;
+    color: #999;
+}
+#content .ht-photo li{
+    vertical-align: top;
+    width: 170px;
+    display: inline-block;
+}
+#content .hot-more{
+    font: 12px Arial, Helvetica, sans-serif;
+}
+#content .ht1{
+    margin: 10px 0 0 10px;
+    float: left;
+}
+#content .pic{
+    width: 170px;
+    vertical-align: middle;
+    white-space: nowrap
+}
+#content .notes{
+    width: 275px;
+    float: left;
+}
+#content .notes li{
+    margin-top: 12px;
+    font: 12px Helvetica,Arial,sans-serif;
+    line-height: 1.62;
+}
+#content .side{
+    float: right;
+}
+#content .side-pic img{
+    height: 150px;
+    width: 250px;
+}
+#content{
+
+    overflow: hidden;
+    /*有问题如何让他内容撑开*/
+}
+#middle-content{
+    background: #f7f7f7
+}
+
+
+
