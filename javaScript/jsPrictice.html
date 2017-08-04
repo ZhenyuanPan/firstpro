@@ -28,13 +28,138 @@ function agep(age) {
     else {
         return'4'
     }}*/
-function factorial(n) {
+/*function factorial(n) {
     if (n<=1){
         return 1;
     }
     return factorial(n-1) * n;
     }
-console.log(factorial(4));
+console.log(factorial(4));*/
+
+/*document.write('Hello world')*/
+
+/*var x,y,max;
+x=Math.random();
+y=Math.random();
+max=x>y?x:y;
+document.write('x=');document.write(x);document.write("<BR>");
+document.write('y=');document.write(y);document.write("<BR>");
+document.write('max=');document.write(max);*/
+
+/*var b = new Date()
+document.write(b.getFullYear())*/
+
+/*var today,year,isLeapYear;
+today=new Date();
+year=today.getFullYear();
+isLeapYear=((year%4==0&&year%100!=0)||year%400==0);
+document.write('今年');document.write(isLeapYear?'是闰年':'不是闰年');*/
+
+/*var age = prompt('age','21');
+if(age<14){
+    document.write('小破孩')
+}else if (14<age||age<24){
+    document.write('青年')
+}else if (age>=24||age<40){
+    document.write('中年')
+}else if (age>40||age<60||age>60){
+    document.write('老年')
+}*//*第一个自己写出来的哈哈哈*/
+
+/*var day;
+    day=prompt('输入0~6今天星期几:','0');
+    /!*!/!*day=parseInt(day);用于解析字符串我用的是字符串不用写，解析了输入了数字就没有用了*!/!*!/
+    switch (day){
+        case '0':
+            document.write('星期一');
+            break;
+        case '1':
+            document.write('星期二');
+            break;
+        case '2':
+            document.write('星期三');
+            break;
+        case '3':
+            document.write('星期四');
+            break;
+        case '4':
+            document.write('星期五');
+            break;
+        case '5':
+            document.write('星期六');
+            break;
+        case '6':
+            document.write('星期日');
+            break;
+        default:
+            alert('输入有误');
+            break;
+    }*/
+
+
+/*function getFactorial(n) {
+    if (n < 1) {
+        return 1;
+    } else{
+            return getFactorial(n-1)*n;
+        }
+    }
+var j=prompt('输入数字计算阶乘','');
+alert('该数字阶乘='+getFactorial(j));*/
+
+/*function accumulation(n) {
+    var sum_fac,fac,i;
+    sum_fac=0;
+    fac=1;
+    for(i=1;i<=n;i++){
+        fac*=i;
+        sum_fac+=fac;
+    }return sum_fac;
+}
+var j=prompt('输入一个数值计算他阶乘的累加','');
+alert(accumulation(j));*/
+
+
+/*function strLengthCompaer(str1,str2) {
+    document.write(Math.max(str1.length,str2.length)+'<br>')
+}
+var a=prompt("输入第一个字符串",'');
+var b=prompt('输入第二个字符串','');
+strLengthCompaer(a,b);*/
+
+/*document.write('   1 ' +"<br>"+'   1 2 '+"<br>"+'   1 2 3 '+"<br>"+'   1 2 3 4 ');*/
+
+/*function number(x) {
+    for(x;x<999;x++){                                  /!*形参在for中不能赋值？能不能alert全部结果*!/
+        if (x%4==2 && x%7==3 && x%9==5&&x<999){
+            document.write(x+'<br>');
+        }
+    }return x;
+}
+alert(number(1))*/
+
+
+/*function fouthNum(n,nb) {
+    var x,a,b,c;
+    for(n;n<9999;n++) {
+        if (n % 13 != 0) continue;
+        x = n;
+        a = Math.floor(x / 1000);
+        x %= 1000;
+        b = Math.floor(b / 100);
+        b %= 100;
+        c = Math.floor(c / 10);                          有问题
+        if (a == b + c) {
+            nb += 1;
+            document.write(n + "    ");
+            if (nb % 10 == 0) document.write('\n');
+        }
+    }
+    document.write('\n\n');
+    document.write('共有'+nb+'个');
+}
+fouthNum(1000,0)*/
+
 </script>
 </body>
 </html>
