@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            height: 12000px;
+        }
+        #moveToTop{
+            height: 40px;
+            width: 40px;
+            background: #000;
+            color: white;
+            bottom: 10px;
+            right: 10px;
+            position: fixed;
+            text-align: center;
+            line-height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+<div id="moveToTop">顶部</div>
+       <script>
+   var movetop = document.getElementById('moveToTop');
+   movetop.onclick=function () {
+       var scrolltop=document.documentElement.scrollTop||document.body.scrollTop;
+       var timey = setInterval(function () {
+           window.scrollTo(0,scrolltop-=50);
+           if(scrolltop<=0){
+               clearInterval(timey)
+           }
+       },10)
+   };
+</script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+    ul{
+        list-style: none;
+    }
+    #container{
+        width: 680px;
+        height: 344px;
+        background: bisque;
+        margin: 0 auto;
+        position: relative;
+    }
+    #tabs{
+        bottom: 10px;
+        position: absolute;
+        right: 10px;
+    }
+    #tabs li{
+        width: 20px;
+        height: 20px;
+        float: left;
+        margin-right: 10px;
+        background: #000;
+        color: #ffffff;
+        text-align: center;
+        cursor: pointer;
+    }
+    #tabs .selected{
+        background: orange;
+        color: #ffffff;
+    }
+    #arrows{
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+    }
+    #img img{
+        display: none;               /*div下的img不显示*/
+    }
+    #img .selected{
+        display: block;             /*被选图像显示出来*/
+    }
+    #arrows span{
+        float: left;
+        width: 20px;
+        height: 20px;
+        background: #000;
+        color: #ffffff;
+        margin-right: 5px;
+        text-align: center;
+        line-height: 20px;
+        cursor: pointer;
+    }
+</style>
+<body>
+<div id="container">
+    <ul id="tabs">
+        <li class="selected">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <div id="img">
+        <img class="selected" src="img/1.jpg" alt="">
+        <img src="img/2.jpg" alt="">
+        <img src="img/3.jpg" alt="">
+        <img src="img/4.jpg" alt="">
+    </div>
+    <div id="arrows">
+        <span id="prev">&lt;</span>
+        <span id="next">&gt;</span>
+    </div>
+</div>
+<script>
+    var oCon = document.getElementById('container');
+    var oTabs = document.getElementById('tabs');
+    var oImg= document.getElementById('img');
+    var aLi=oTabs.children;
+    var aImg=oImg.children;
+    var oNext=document.getElementById('next');
+    var oPrev=document.getElementById('prev');
+
+ for(var i=0;i<aLi.length;i++){
+     aLi[i].index=i;
+     aLi[i].onmouseover=function () {
+         index=this.index;
+        cImg(this);
+     };
+ }
+ function cImg(e) {
+     for(var i=0;i<aLi.length;i++){
+         aLi[i].className='';
+         aImg[i].className='';
+     }
+     e.className='selected';
+     aImg[e.index].className='selected';
+ }
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>goback</title>
+</head>
+<body>
+this is a.html
+<br>
+<button id="back">go back</button>
+<script>
+    var goback=document.getElementById('back');
+    goback.onclick=function () {
+/*        history.back();
+        history.forward();*/
+        history.go(-1);
+    }
+</script>
+</body>
+</html>
