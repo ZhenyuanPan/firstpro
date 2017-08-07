@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+            list-style: none;
+        }
+        #container{
+            height: 344px;
+            width: 680px;
+            margin: 0 auto;
+            top: 40px;
+            position: relative;
+        }
+        #imgs img{
+            display: none;
+        }
+        #tabs{
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+        #tabs li , #arrows span{
+            height: 30px;
+            width: 30px;
+            float: left;
+            text-align: center;
+            line-height: 30px;
+            background: #000;
+            color: #ffffff;
+            margin-right: 15px;
+        }
+        #arrows{
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+        }
+        #imgs .selected{
+            display: block;
+        }
+        #tabs .selected{
+            color: orange;
+            background: orangered;
+        }
+    </style>
+</head>
+<body>
+<div id="move">
+<div id="container">
+    <div id="imgs">
+        <img class="selected" src="1.jpg" alt="">
+        <img src="2.jpg" alt="">
+        <img src="3.jpg" alt="">
+        <img src="4.jpg" alt="">
+    </div>
+    <ul id="tabs">
+        <li class="selected">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <div id="arrows">
+        <span id="prev">&lt;</span>
+        <span id="next">&gt;</span>
+    </div>
+</div>
+</div>
+<script>
+    var oMove =document.getElementById('move');
+    var oCon =document.getElementById('container');
+    var oImgs = document.getElementById('imgs');
+    var aImgs =oImgs.getElementsByTagName('img');
+    var oUl = document.getElementById('tabs');
+    var aLi = oUl.getElementsByTagName('li');
+    var oPrev = document.getElementById('prev');
+    var oNext =document.getElementById('next');
+    var nIndex =0;
+    var timey;
+    for(var i=0;i<aLi.length;i++ ){
+            aLi[i].index=i;
+        aLi[i].onmouseover=function () {
+            nIndex=this.index;
+            changeImgs();
+        };
+    }
+    oNext.onclick=oPrev.onclick=function () {
+        if (this===oNext){
+            nIndex++;
+            if (nIndex==aLi.length){
+                nIndex=0
+            }
+        }else {
+            nIndex--;
+            if (nIndex==-1)
+                nIndex=aLi.length-1;
+        } changeImgs();
+    };
+
+
+    timey=setInterval(function (){clickTime()
+    },1000);
+    oCon.onmouseover=function () {
+        clearInterval(timey)
+    };
+    oCon.onmouseout=function () {
+        timey=setInterval(function (){clickTime()
+        },1000);
+    };
+
+    function changeImgs() {
+        for(var i=0;i<aLi.length;i++ ){
+            aLi[i].className='';
+            aImgs[i].className='';
+        }aLi[nIndex].className='selected';
+        console.log(this);
+        aImgs[nIndex].className='selected';
+    }
+    function clickTime() {
+        nIndex++;
+        if (nIndex==4){
+            nIndex=0
+        }changeImgs();
+    }
+    oNext.onselectstart=oPrev.onselectstart=function () {
+        return false;
+    };
+    var x =e.clientX-oMove.offsetLeft;
+    var y =e.clientY-oMove.offsetTop;
+    oMove.onmousedown=function (e) {
+        oMove.style.left=e.clientX-x+'px';
+        oMove.style.top=e.clientY-y+'px';
+    }
+</script>
+</body>
+</html>

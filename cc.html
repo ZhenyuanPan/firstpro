@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+
+        }
+        #tabs{
+            overflow: hidden;
+        }
+        #container{
+            width: 400px;
+            height: 300px;
+            margin: 20px auto;
+        }
+        #tabs li{
+            width: 120px;
+            height: 30px;
+            background: #cccccc;
+            float: left;
+            margin-right: 5px;
+            text-align: center;
+        }
+        #tabs .selected{
+            background: #000;
+            color: #ffffff;
+        }
+        #content{
+            height: 270px;
+            border-top: 1px solid black ;
+            background: #cccccc;
+        }
+        #content div{
+            display: none;
+        }
+        #content .selected{
+            display: block;
+        }
+        
+        
+    </style>
+</head>
+<body>
+<div id="container">
+    <ul id="tabs">
+        <li class="selected">js</li>
+        <li>html</li>
+        <li>css</li>
+    </ul>
+    <div id="content">
+        <div class="selected">js...</div>
+        <div>html...</div>
+        <div>cs...</div>
+    </div>
+</div>
+<script>
+    var  oTabs = document.getElementById('tabs');
+    var  aLi =oTabs.getElementsByTagName('li');
+
+    for (var i=0;i<aLi.length;i++){
+        aLi[i].onclick=function () {
+            for (var  i=0; i<aLi.length; i++){
+                aLi[i].className='';
+            }
+            this.className ='selected';
+        };
+    }
+</script>
+</body>
+</html>
