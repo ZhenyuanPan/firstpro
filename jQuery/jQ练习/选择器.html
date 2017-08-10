@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+    <!--input['checkbox' name='hobby']*4-->
+<input type="checkbox" name="hobby">足球
+<input type="checkbox" name="hobby">篮球
+<input type="checkbox" name="hobby">排球
+<input type="checkbox" name="hobby">乒乓球
+<br>
+<button type="button" id="check-all">all</button>
+<button type="button" id="check-no">none</button>
+<button type="button" id="check-reverse">反选</button>
+<body>
+<script src="jquery-1.12.4.min.js"></script>
+<script>
+    $(function () {
+        var $hobbys = $('input[name="hobby"]');
+        $("#check-all").on("click",function () {
+            $hobbys.prop("checked","true");
+        });
+
+        $("#check-no").on("click",function () {
+            $hobbys.removeProp("checked");
+        });
+        $("#check-reverse").on("click",function () {
+            /*$hobbys.each(function () {
+                this.checked=!this.checked;
+            });*/
+            $hobbys.each(function (index,elem) {
+                if ($(elem).prop('checked')){
+                    $(elem).removeProp('checked');
+                }else {
+                    $(elem).prop('checked','true');
+                }
+            })
+        })
+    });
+
+</script>
+</body>
+</html>

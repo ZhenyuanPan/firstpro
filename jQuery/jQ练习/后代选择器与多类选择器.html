@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+        div{
+            display: block;
+        }
+        #wrap{
+            background-color: red;
+            height: 500px;
+            width: 500px;
+            overflow: hidden;
+        }
+        #wrap .content{
+            background-color: orange;
+            height: 400px;
+            width: 400px;
+        }
+        #wrap .content.child{
+            background-color: yellow;
+            height: 300px;
+            width: 300px;
+        }
+        #outside{
+            background: green;
+            height: 500px;
+            width: 500px;
+        }
+        #outside .outsideContent{
+            background: deepskyblue;
+            height: 400px;
+            width: 400px;
+        }
+        #outside .outsideContent.child{
+            background: blue;
+            height: 300px;
+            width: 300px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <div class="content">
+        <div class="content child"></div>
+    </div>
+</div>
+<div id="outside">
+    <div class="outsideContent">
+        <div class="outsideContent child"></div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<form method="post" action="">
+    <div class="int">
+        <label for="username">用户名:</label>
+        <input type="text" id="username" class="required" />
+    </div>
+    <div class="int">
+        <label for="email">邮箱:</label>
+        <input type="text" id="email" class="required" />
+    </div>
+    <div class="int">
+        <label for="personinfo">个人资料:</label>
+        <input type="text" id="personinfo" />
+    </div>
+    <div class="sub">
+        <input type="submit" value="提交" id="send"/><input type="reset" id="res"/>
+    </div>
+</form>
+<script src="../../jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+        $(".required").each(function () {
+            $(this).after("<span style='color: red'>*</span>")
+        });
+        $("#username").on('blur',function () {
+           if(this.value==''){
+               $(this).after("<div style='display:inline-block;'><img src='reg3.gif' style='vertical-align: middle'><span style=''>请输入正确值</span></div>")
+           }
+                })
+    });
+
+</script>
+</body>
+</html>

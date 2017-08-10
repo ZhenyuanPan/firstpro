@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="search">
+<ul id="content">
+    <li>iphoto</li>
+    <li>huawei</li>
+    <li>xiaomi</li>
+</ul>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $('#search').on('keyup',function () {
+        $("#content li").css({'background':"transparent"});                                        //先添加样式 背景为透明 后面内容筛选匹配时改变样式
+        if($(this).val()!=''){                                                                    //内容为空时候也算是这几个字符串共同所包含的(包含'')所以要当内容不为空时候进行内容筛选
+        $("#content li:contains("+$(this).val().toLowerCase()+")").css({'background':'yellow'})}                //函数不能被引号包裹,所以拼接字符串
+    })
+</script>
+</body>
+</html>
