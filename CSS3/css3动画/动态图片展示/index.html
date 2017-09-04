@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #container{
+            position: absolute;
+            top:0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: url("img/bg.jpg");
+        }
+        #container .img{
+            width: 125px;
+            height: 125px;
+            border: 5px solid #FFFFFF;
+            box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.5);
+            position: absolute;
+            top: -500px;
+            left: -500px;
+            transition: all 2s ease;
+            cursor: pointer;
+        }
+        #container .img span{
+            width: 100%;
+            height: 100%;
+            display: block;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+<div id="container"></div>
+<script>
+    (function () {
+        var oContainer=document.getElementById('container');
+        var intval=0;
+        var COL = 6; /*四行六列是一个常数*/
+        var ROW = 4;
+        var NUM=COL*ROW;
+        var iImgsW;
+        var iImgsH;
+        var fCol;
+        var fRow;
+        var bigW=750;
+        var bigH=500;
+        var sImgsW=125;
+        var sImgsH=125;
+
+
+        for(var i=0;i<NUM;i++){
+            var oBImg = new Image();
+            oBImg.onload=function () {
+                intval++;
+                if(intval==NUM*2){
+                    loadSuccessful();
+                }
+            };
+            oBImg.src='img/'+(i+1)+'.jpg';
+
+
+            var oSImg = new Image();
+            oSImg.onload=function () {
+                intval++;
+                if(intval==NUM*2){
+                    loadSuccessful();
+                }
+            };
+
+            oSImg.src='img/thumbs/'+(i+1)+'.jpg';   /* //大图片load24小图片load24个当全部完成时候执行函数*/
+        }
+
+            var index=0;
+        function loadSuccessful() {
+            for(var i=0;i<COL;i++){
+                for(var j=0;j<ROW;j++){
+                    index++;
+                    var oDiv =document.createElement('div');
+                    oDiv.className='img';
+                    oDiv.style.backgroundImage='url(img/thumbs/'+index+'.jpg)';
+                    oDiv.pos={
+                        col:i,
+                        row:j
+                    };
+                    oDiv.index=index;
+                    oDiv.innerHTML='<span></span>';
+                    oContainer.appendChild(oDiv);
+                    /*所有img添加了div并且appendto父元素上了,并在子元素div每个添加了一个遮罩span*/
+                    /*下一步让所有div飞到指定!位置!*/
+                   /* 计算每个div的位置*/
+                }
+            }
+            aImgs=oContainer.getElementsByTagName('div');/*获得tagname对象必须在他的父元素下货去*/
+            iImgsW =aImgs[0].offsetWidth;
+            iImgsH =aImgs[0].offsetHeight;
+            fCol=(oContainer.offsetWidth-iImgsW*COL)/(COL+1);
+            fRow=(oContainer.offsetHeight-iImgsH*ROW)/(ROW+1);  /*除号左右必须加括号*/
+            /* 给每个img元素加位置肯定用循环啊*/
+            for(var i=0;i<NUM;i++){
+                console.log(aImgs[i]);
+                aImgs[i].style.left=(iImgsW+fCol)*aImgs[i].pos.col + fCol+'px';
+                aImgs[i].style.top=(iImgsH+fRow)*aImgs[i].pos.row + fRow+'px';
+                aImgs[i].style.transform='rotate('+ (Math.random()*40-20)+'deg)';                                  //不是fn肯定赋值没有（）啊
+                aImgs[i].style.transitionDelay=(NUM-i)*100+'ms'
+            }
+        }
+           //定义标志位是散开还是合并，ture为散开要合并，false表示合并要散开
+            var flag=true;
+            var fBCol= (oContainer.offsetWidth - bigW)/2;
+            var fBRow= (oContainer.offsetHeight-bigH)/2;
+            oContainer.onclick=function (e) {
+                if(this!=e.target){
+                    for(var i=0;i<aImgs.length;i++){
+                        aImgs[i].style.left=fBCol+sImgsW*aImgs[i].pos.col+fBCol+'px';
+                        aImgs[i].style.top=fBRow+sImgsH*aImgs[i].pos.row+fBRow+'px';
+                        aImgs[i].style.border=1+ 'px';
+                    }
+                }else{
+
+                }
+                flag=!flag
+
+
+
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    })()
+
+
+
+
+</script>
+</body>
+</html>

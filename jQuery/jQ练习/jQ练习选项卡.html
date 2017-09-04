@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+            list-style-type: none;
+            position: relative;
+        }
+        #wrap{
+            height: 300px;
+            width: 400px;
+            background: orange;
+        }
+     /*   .selected{
+            background: oldlace;
+        }*/
+        #select li{
+            float: left;
+            padding: 10px 20px 5px 20px;
+            margin-left: 20px;
+            background: red;
+        }
+        #content{
+            position: absolute;
+            top: 40px;
+            background: deepskyblue;
+        }
+        #content div{
+            width: 400px;
+            height: 280px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div id="wrap">
+    <ul id="select">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <div id="content">
+        <div>啊?马冬什么?</div>
+        <div>蛤?什么冬梅啊?</div>
+        <div>恩?马什么梅?</div>
+    </div>
+</div>
+<script src="jquery-1.12.4.js"></script>
+<script>
+$(function () {
+    var $cDiv =$("#content div");
+    var $sLi =$("#select li");
+$cDiv.css({display:"none"});
+$sLi.on("click",function () {
+    $sLi.index();
+    var index =$(this).index();
+    console.log(index);
+    $sLi.css({background:'red'});
+    $(this).css({background:"blue"});
+//    $sLi.not(this).css({background:"red"});
+    $cDiv.css({display:"none"});                             //鼠标事件每当执行一次都相当一次  !循环!  ,代码是逐句执行
+    $cDiv.eq(index).css({display:"block"});                  // 所以$cDiv.css({display:"none"});可以把上次click事件中选定的div display:block改为none
+})
+    });
+</script>
+</body>
+</html>

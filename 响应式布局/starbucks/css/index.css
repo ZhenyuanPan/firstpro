@@ -1,0 +1,760 @@
+#head{
+    position: fixed;
+    display: table;
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
+    z-index: 2;   /*网页是个三维结构有xyz轴!!!z-index调整z轴!!!*/
+}
+#head .menu-big{
+    height: 130px;
+    width: 140px;
+    display: table-cell;
+    vertical-align: middle;
+}
+#head .menu-small{
+    height: 50px;
+    width: 100px;
+    text-align: center;
+}
+#head .img-menu{
+    cursor: pointer;
+}
+#head .menu p{
+    font-size: 16px;
+}
+#head .img{
+    display: table-cell;           /*它的宽度由内容撑起来*/
+    vertical-align: middle;
+}
+#head .img-logo-wrapper{
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;    /*得有固定大小才能靠margin居中*/
+}
+#head .logo-img{
+    width: 100px;
+}
+#head .login{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+#head .log-btn{
+    width: 160px;
+    font-size: 24px;
+     float: right;
+}
+#head .login .log{
+    font-size: 22px;
+    color: #bba380;
+    font-weight: 700;
+    cursor: pointer;
+}
+#head .login .sign{
+    font-size: 22px;
+    color: #bba380;
+    font-weight: 700;
+    cursor: pointer;
+}
+#headHelp{
+    width: 100%;
+    height: 130px;
+    background: #37A7D7;
+}
+#adv{
+    overflow: hidden;
+}
+#adv .adv-img{
+    display: block;
+    width: 100%;
+}
+#adv .adv-div-img{
+    overflow: hidden;
+    position: relative;
+}
+#adv p{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    color: #FFFFFF;
+    font-weight: 500;
+}
+#rewards{
+    background: #000;
+    width: 100%;
+}
+#rewards .wrapper{
+    width: 75%;
+    height: 220px;
+    margin: 0 auto;
+}
+#rewards .rewards-l{
+    width: 350px;
+    height: 220px;
+    padding-left: 90px;
+    background: #D49AE1;
+    float: left;
+    background: url("../img/rewards_bg.png")no-repeat;
+    box-shadow:0 0 80px 16px rgba(0,0,0,1) inset;
+    border-radius: 15px;
+    position: relative;
+}
+#rewards .rewards-r{
+    width: 430px;
+    height: 220px;
+    float: right;
+    position: relative;
+}
+#rewards p{
+    position: absolute;
+    font-size: 23px;
+}
+#rewards .rewards-l p{
+    color: #FFFFFF;
+    top: 100px;
+    line-height: 28px;
+}
+#rewards .star-ka{
+    position: absolute;
+    top: 130px;
+}
+#rewards .r-large{
+    font-size: 36px;
+    color: #FFFFFF;
+    top: 50px;
+    line-height: 28px;
+}
+#rewards .r-small{
+    color: #FFFFFF;
+    top: 90px;
+    font-size: 16px;
+    line-height: 28px;
+}
+#rewards .rewards-sign{
+    width: 114px;
+    height: 46px;
+    border: 3px solid #a18e60;
+    background: #000000;
+    font-size: 20px;
+    text-align: center;
+    line-height: 46px;
+    position: absolute;
+    bottom: 30px;
+    color: #a18e60;
+}
+#rewards .rewards-log{
+    width: 114px;
+    height: 46px;
+    border: 3px solid #a18e60;
+    background: #000000;
+    font-size: 20px;
+    text-align: center;
+    line-height: 46px;
+    position: absolute;
+    bottom: 30px;
+    left: 124px;
+    color: #a18e60;
+}
+#rewards .rewards-btn p{
+    position: absolute;
+    bottom:45px;
+    right: 0;
+    font-size: 19px;
+    color: #a18e60;
+}
+#app{
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+#app .wrapper{
+    width: 75%;
+    height: 220px;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: table;
+}
+#app .app-device{
+    width: 260px;
+    height: 220px;
+    float: left;
+    background: url("../img/app_device.png");
+    background-size: cover;
+}
+#app .app-content{
+    width: 600px;
+    height: 220px;
+    float: right;
+    /*position: relative;*/
+    position: relative;
+}
+#app .app-down-img{
+    width: 150px;
+    height: 220px;
+}
+#app .app-down-img img{
+    position: absolute;
+    left: 5px;
+    width: 140px;
+}
+#app .app-content p{
+    font-size: 25px;
+    position: absolute;
+    top: 30px;
+    right: 0;
+}
+#app .app-content .learn-more{
+    position: absolute;
+    top: 100px;
+    left: 150px;
+    font-size: 19px;
+    color: #a18e60;
+}
+#app .app-down-img-changeP{
+    margin: 25px;
+    overflow: hidden;
+    display: none;
+}
+#app .app-down-img-changeP-p{
+    text-align: center;
+    font-size: 18px;
+    line-height: 28px;
+}
+#app .app-down-img-changeP-div{
+    width: 130px;
+    height: 52px;
+    margin: 0 auto;
+}
+#app .app-down-img-changeP-img{
+    height: 52px;
+    cursor: pointer;
+}
+#streamer{
+    width: 100%;
+}
+#streamer img{
+    width: 100%;
+}
+#mosaic{
+    width: 100%;
+    display: flex;
+}
+#mosaic .productL{
+    flex-grow: 1;
+    background: url("../img/Starbucksadv2.jpg")no-repeat;
+    background-size: cover;
+    padding-top:85%;
+}
+#mosaic .productR{
+    flex-grow: 1;
+    background: url("../img/Starbucksadv2.jpg")no-repeat;
+    background-size: cover;
+    padding-top:85%;
+}
+#wsg {
+    width: 100%;
+    background: #106e4b;
+}
+#wsg .wrapper{
+    width: 75%;
+    margin: 0 auto;
+    height: 222px;
+    overflow: hidden;
+    background: #106e4b;
+}
+#wsg .wsg-title{
+    margin: 40px 20px;
+    float: left;
+}
+#wsg .wsg-qrc{
+    margin: 35px  20px;
+    float: left;
+}
+#wsg .wsg-cup{
+    margin: 40px 20px;
+    float: left;
+}
+#wsg .wsg-cup img{
+    width: 110px;
+}
+#wsg .wsg-word{
+    float: left;
+}
+#wsg .wsg-word img{
+    margin-top: 40px;
+    width: 200px;
+}
+#apple-watch{
+    width: 100%;
+    height: 220px;
+}
+#apple-watch .wrapper{
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#apple-watch .watch-img{
+    float: left;
+}
+#apple-watch .watch-img img{
+    width: 408px;
+}
+#apple-watch .watch-intro{
+    font-size: 18px;
+    line-height: 26px;
+    float: left;
+    padding: 35px 68px 0 68px;
+    margin-bottom: 14px;
+}
+#apple-watch .learn-more{
+    font-size: 17px;
+    color: #a18e60;
+}
+#apple-watch .app-watch-down{
+    padding: 35px 0 0 20px;
+    float: left;
+}
+#apple-watch .app-watch-down img{
+    width: 130px;
+}
+#apple-watch .app-watch-down p{
+    text-align: center; /*字在div中水平居中就用text-align:center;给它加position就不好使了*/
+    font-weight: 600;
+}
+#apple-watch .app-watch-down-change{
+    display: none;
+}
+#collection{
+    width: 100%;
+    background: #f5f5f5;
+    overflow: hidden;
+}
+#collection .wrapper{
+    width: 95%;
+    background: #f5f5f5;
+    margin: 0 auto;
+}
+#collection .col-LargeP{
+    font-size: 30px;
+    margin: 20px 0;
+    text-align: center;
+    color: #3d3d3d;
+}
+#collection .col-SmallP{
+    font-size: 18px;
+    text-align: center;
+    color: #8B8B8B;
+    margin-bottom: 80px;
+}
+#collection .col-pic1,.col-pic2,.col-pic3,.col-pic4{
+    width: 240px;
+    height: 280px;
+    margin: 15px;
+    box-shadow: 0 0 1px 0 rgba(0,0,0,.2);
+    float: left;
+
+}
+#collection .col-box{
+    margin: 0 auto;
+    width: 1080px;
+    height: 300px;
+}
+#collection .col-p-top{
+    height: 160px;
+    width: 100%;
+}
+#collection .aa{
+    background: url("../img/col1.png");
+    background-size: cover;
+}
+#collection .bb{
+    background:url("../img/col2.png");
+    background-size: cover;
+}
+#collection .cc{
+    background: url("../img/col3.png");
+    background-size: cover;
+}
+#collection .dd{
+    background: url("../img/col4.png");
+    background-size: cover;
+}
+#collection b, #collection p{
+    text-align: center;
+    display: block;
+}
+#collection b{
+    margin: 15px 0 0 0;
+}
+#collection p{
+    margin-top: 12px;
+}
+#reserve{
+    width: 100%;
+    height: 608px;
+    padding: 40px 0;
+    background: #000;
+    overflow: hidden;            /*给祖先元素加oh解决margin溢出问题*/
+}
+#reserve .wrapper{
+    width: 95%;
+    height: 100%;
+    margin: auto;
+    display: table;
+    overflow: hidden;
+}
+#reserve .reserve-cell1{
+    display: table-cell;
+}
+#reserve .reserve-cell2{
+    display: table-cell;
+    text-align: center;
+    position: relative;
+    vertical-align: middle                /*父元素table-cell 和 vertical-align:middle 组合可将子元素全部居中*/
+}
+#reserve h3{
+    margin: 28px 0 13px 0;
+    font-weight: 900;
+    font-size: 13px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #a98e67;
+    letter-spacing: 3px;
+}
+#reserve p{
+    margin: 0 0 40px 0;
+    font-size: 18px;
+    line-height: 28px;
+    color: #707070;
+}
+#reserve .reserve-cell2-content{
+    overflow: hidden;
+}
+#reserve .rewards-btn{
+    display: table;   /*当元素上加上display:table,table-cell用了之后，不能用margin了？？*/
+}
+#reserve .reserveR-btn{
+    font-size: 16px;
+    color: #a28056;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    border: 2px #bba380 solid;
+    height: 50px;
+    width: 160px;
+}
+#reserve .reserveL-btn{
+    font-size: 16px;
+    color: #a28056;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    border: 2px #bba380 solid;
+    height: 50px;
+    width: 140px;
+    display: table-cell;
+    vertical-align: middle;
+    margin-left: 14px;
+}
+#footer{
+    width: 100%;
+    height: 1140px;
+    padding: 60px 0 20px 0;
+    background: #292929;
+}
+#footer .wrapper{
+    width: 75%;
+    height: 1140px;
+    margin: 0 auto;
+    background: #292929;
+    overflow: hidden;
+    display: table;
+}
+#footer .page-footer-row{
+    margin-bottom: 80px;
+
+}
+#footer .page-footer-row1{
+    width: 100%;
+    margin: 0 auto;
+    display: table;
+}
+#footer .item{
+    display: table-cell;
+}
+#footer a{
+    width: 285px;
+    float: left;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    margin-bottom: 7px;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+#footer p{
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 7px;
+    font-weight: 600;
+}
+#footer .down{
+    vertical-align: top;   /*发觉新大陆这套组合可以把元素位置置于top*/
+    width: 285px;
+}
+#footer .down-img{
+    width: 100px;
+}
+#footer .down img{
+    width: 100px;
+}
+#footer .wording{
+    width: 100px;
+    text-align: center;
+}
+#footer .wording p{
+    color: #A3A3A3;
+    font-size: 0.3rem;
+}
+#footer .item-appUi{
+    width: 100px;
+    height: 25px;
+    margin-top: 5px;
+    display: table;
+}
+#footer .android{
+    display: table-cell;
+    font-size: 0.5rem;
+    background: #a28056;
+    border: 1px #FFCF78 solid;
+    vertical-align: middle;
+    text-align: center;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+#footer .ios{
+    display: table-cell;
+    background: #a28056;
+    border: 1px #FFCF78 solid;
+    font-size: 0.5rem;
+    vertical-align: middle;
+    text-align: center;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+#footer .contents{
+    display: table-cell;
+
+}
+#footer .icons{
+    display: table-cell;
+
+}
+#footer .contents-wording .police-img{
+    float: left;
+}
+#footer .police-img{
+    background: url("../img/icpicon.png")no-repeat;
+    font-weight: 300;
+    font-size: 1rem;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+#footer .wechat{
+    height: 40px;
+    width: 40px;
+    margin: 0 8px;
+    background: url("../img/wechat.svg") no-repeat;
+    background-size: cover;
+    float: left;
+}
+#footer .weibo{
+    height: 40px;
+    width: 40px;
+    margin: 0 8px;
+    background: url("../img/weibo.svg") no-repeat;
+    background-size: cover;
+    float: left;
+}
+
+
+.dialog-main{
+    display: none;
+    background: #292929;
+    position: fixed;
+    top:0;
+    bottom: 0;
+    width: 330px;
+    z-index: 100;
+    overflow: scroll; /*滚动条想了半天一个代码就解决了*/
+}
+.dialog-main li{
+    height: 30px;
+    width: 280px;
+}
+.mid-nav-li-div1,.mid-nav-li-div2{
+    height: 21px;
+    cursor: pointer;
+}
+.top-nav-div{
+    color: #b89f7a;
+    padding: 10px;
+    border-bottom: 1px solid #b89f7a;
+    width: 310px;
+    height: 150px;
+}
+.top-nav-li{
+    padding: 10px 15px;
+}
+.mid-nav-div{
+    padding: 10px;
+    color: #f7f5d1;
+}
+.mid-nav-li{
+    padding: 10px 15px;
+}
+.mid-gt{
+    float: right;
+}
+.mid-nav-div-ul{
+
+}
+.mid-nav-div-li1,.mid-nav-div-li2{
+    font-size: 13px;
+    font-weight: 400;
+    color: #aaaaaa;
+    padding:5px 10px 5px 20px;
+    display: none;
+}
+
+@media (max-width: 1177px) {
+
+    #rewards{
+        background: #000;
+        width: 100%;
+    }
+    #rewards .wrapper{
+        width: 75%;
+        margin: 0 auto;
+        height: 440px;
+    }
+    #rewards .rewards-l{
+        width: 350px;
+        height: 220px;
+        padding-left: 0;
+        background: url("../img/rewards_bg.png")no-repeat;
+        box-shadow:0 0 80px 16px rgba(0,0,0,1) inset;
+        border-radius: 15px;
+        margin: 0 auto;
+        float: none;
+        position: relative;
+    }
+    #rewards .rewards-l p{
+        position: relative;   /*把浮动变成文档流元素就可以字体居中了*/
+        text-align: center;
+    }
+    #rewards .star-ka{
+        position: relative;
+    }
+    #rewards .star-ka-img{
+        height: 45px;
+        width: 213px;
+        margin: 0 auto;  /* div套div可用margin:0 auto*/
+    }
+    #rewards .rewards-r{
+        width: 430px;
+        height: 220px;
+        margin: 0 auto;
+        float: none;
+        position: relative;
+    }
+    #rewards .r-large{
+        font-size: 30px;
+        color: #FFFFFF;
+        line-height: 28px;
+        position: relative; /*把浮动变成文档流元素就可以字体居中了*/
+        text-align: center;
+    }
+
+
+    #app{
+        height: 260px;
+    }
+    #app .wrapper{
+        height: 260px;
+    }
+    #app .app-content{
+        display: none;
+    }
+    #app .app-down-img-changeP{
+        display: table-cell;
+        vertical-align: middle; /*垂直居中*/
+    }
+    #app .app-device{
+        height: 260px;
+    }
+
+
+    #wsg .wrapper{
+        height: 450px;
+    }
+    #wsg .wsg-cup{
+        float: none;
+        height: 130px;
+        padding: 8px;
+        width: 110px;
+        margin: 10px auto 10px auto;
+    }
+    #wsg .wsg-word{
+        float: none;
+        display: block;
+        height: 150px;
+        width: 200px;
+        margin: 0 auto;
+    }
+    #wsg .wsg-top{
+        display: table;
+        width: 100%;
+    }
+    #wsg .wsg-title{
+        display: table-cell;
+        height: 126px;
+        float: none;
+    }
+    #wsg .wsg-qrc{
+        height: 126px;
+        display: table-cell;
+        float: none;
+    }
+    #apple-watch{
+        height: auto;
+    }
+    #apple-watch .wrapper{
+        height: auto;
+    }
+    #apple-watch .watch-intro{
+        float: none;
+        text-align: center;
+    }
+
+
+   #collection .col-box{
+       width: 540px;
+       height: 650px;
+   }
+
+
+    #footer a{
+        width: 200px;
+    }
+
+
+
+
+
+
+}

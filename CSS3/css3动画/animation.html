@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            border: 0;
+        }
+        #animation{
+            margin: 200px auto;
+            height: 100px;
+            width: 100px;
+            background: #ff6600;
+            animation: anima 3s linear infinite;
+        }
+        @keyframes anima {
+            0%{
+
+                width:200px;
+            }
+            25%{
+                transform:scale(2,0.5)
+            }
+            50%{
+                transform:skew(25deg,25deg);
+            }
+            75%{
+                transform:rotate(50deg)
+            }
+            100%{
+                background: deepskyblue;
+
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="animation"></div>
+</body>
+</html>

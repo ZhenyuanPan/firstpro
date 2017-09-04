@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    (function () {
+        var obj =new Object();
+        obj.name='zhangsan';
+        obj.age=18;
+//        obj.sayName=function () {
+//            alert(obj.name);
+//        };
+        obj.sayName=function () {
+            alert(this.name);         //this关键字:指向当前对象,this要出现在方法中
+        };
+        console.log(obj);//返回一个对象
+        //创建对象简写方法
+        var obj1={
+            name:'zhangsan', //属性:值 逗号连接 方法:内容
+            age:18,
+            sayHello:function () {
+                alert(this.name);
+            }
+        };
+
+        for(var p in obj){
+            console.log(obj[p]);//[p] p是个变量,在obj中没有属性名为p的属性,所以必须用[],遍历obj中所有的属性(注意遍历返回的是属性的值,不是属性名)
+            console.log(obj.name);//.取到对象内的属性名为name的属性
+        }
+
+
+
+    })()
+</script>
+</body>
+</html>

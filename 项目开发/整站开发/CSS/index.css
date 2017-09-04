@@ -1,0 +1,117 @@
+#nav{
+    height: 120px;
+}
+#nav .wrapper{
+    width: 1000px;
+    height: 120px;
+    margin: 0 auto;
+    background:  url("../img/loge.png")no-repeat left center ;
+}
+#nav .wrapper-ul{
+    position: absolute;
+    left: 352px;
+    top: 55px;
+
+}
+#nav .wrapper-ul li{                          /* 给block元素设置高才能调里面文字的垂直居中*/
+    float: left;
+    height: 14px;
+    line-height: 14px;
+}
+#nav .wrapper-ul li a{
+    color: #626262;
+    font-size: 15px;
+}
+#nav .wrapper-ul li a span{
+    background: url("../img/spirit.png")no-repeat 0 0;
+    float: right;
+    display: block;
+    height: 14px;
+    width: 1px;
+    margin: 0 27px;
+}
+#search{
+    position: absolute;
+    height: 30px;
+    width: 130px;
+    background: #FFCF78;
+    right: 0;
+    top: 50%;
+    margin-top: -15px;
+    
+}
+#search-ipt{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    background: #f1f3f6;
+    text-indent: 5px;
+}
+#search-icon{
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    margin-top: -6px;
+    width: 10px;
+    height: 12px;
+    background: url("../img/spirit.png")no-repeat -2px 0;
+    cursor: pointer;
+}
+#banner{
+    height: 460px;
+    background: #31333e;
+}
+#banner .wrapper{
+    height: 460px;
+    overflow: hidden;
+}
+#banner h1{
+    position: absolute;
+    left: 154px;
+    top: 46px;
+    font-size: 37px;
+    color: #FFFFFF;
+}
+#banner button{
+    width: 180px;
+    height: 50px;
+    font-size: 18px;
+    color: #FFFFFF;
+    background: #00aeff;
+    border-radius: 4px;
+    position: absolute;
+    left: 700px;
+    top: 40px;
+}
+#banner .carousel {
+    width: 100%;
+    height: 100%;
+    margin-top: 114px;
+
+}
+#banner .carousel .img{
+    position: absolute;
+    left: 50%;
+    margin-left: -274px;
+}
+#banner .carousel-btnL{
+    position: absolute;
+    left: 138px;
+    top: 50%;
+    margin-top: -25px;
+    display: block;
+    height: 50px;
+    width: 29px;
+    background:url("../img/carouselbtnL.png")no-repeat;
+}
+#banner .carousel-btnR{
+    position: absolute;
+    right: 138px;
+    top: 50%;
+    margin-top: -25px;
+    display: block;
+    height: 50px;
+    width: 29px;
+    background:url("../img/carouselbtnR.png")no-repeat;
+
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #transition{
+            height: 100px;
+            width: 100px;
+            background: #ff6600;
+            text-align: center;
+            line-height: 100px;
+            font-size: 30px;
+
+            transition:all 3s ease 2s;
+       /*     transition-property: all;  !*.          <' transition-property '>： 检索或设置对象中的参与过渡的属性
+                                                    <' transition-duration '>： 检索或设置对象过渡的持续时间
+                                                    <' transition-timing-function '>： 检索或设置对象中过渡的动画类型
+                                                    <' transition-delay '>： 检索或设置对象延迟过渡的时间 *!
+            transition-duration: 3s;
+            transition-timing-function: ease;
+            transition-delay:2s;*/
+
+        }
+    </style>
+</head>
+<body>
+<div id="transition">div1</div>
+<script>
+    var oDiv1=document.getElementById('transition');
+    oDiv1.onclick =function () {
+        oDiv1.style.height='400px';
+        oDiv1.style.width='200px';
+        oDiv1.style.background='#cccccc';
+        oDiv1.style.transform="skew(25deg,25deg)" ;                   /* //原生js.给div1的样式添加属性用=加字符串给属性赋值*/
+    };
+</script>
+</body>
+</html>

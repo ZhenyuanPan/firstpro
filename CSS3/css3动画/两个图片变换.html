@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            border: 0;
+            padding: 0;
+            margin: 0;
+        }
+        #content{
+            position: relative;
+            top: 200px;
+            left: 400px;
+        }
+        img{
+            border: 10px #c3c3c3 solid;
+            box-shadow: 10px 10px 10px 3px rgba(50,50,50,.4);
+            position: absolute;
+            top:0;
+            left: 0;
+            transition: all 1s;
+        }
+        #content img:first-child{
+            transform: rotate(30deg);
+        }
+        #content img:last-child{
+            transform: rotate(-20deg);
+        }
+        #content img:first-child:hover{
+            box-shadow: 20px 20px 20px 5px rgba(50,50,50,.4);
+            z-index: 1;
+            transform: scale(1.2);
+        }
+        #content img:last-child:hover{
+            box-shadow: 20px 20px 20px 5px rgba(50,50,50,.4);
+            z-index: 1;
+            transform: rotate(20deg);
+        }
+    </style>
+</head>
+<body>
+<div id="content">
+<img src="../../javaScript/img/1.jpg" alt="">
+<img src="../../javaScript/img/2.jpg" alt="">
+</div>
+</body>
+</html>

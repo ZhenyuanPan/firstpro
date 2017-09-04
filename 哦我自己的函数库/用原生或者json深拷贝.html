@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    (function () {
+
+        function clone(obj) {
+            var newObj = {};
+            for (var p in obj) {
+                newObj[p] = obj[p];//把obj的属性传给newObj的**属性**计算机太笨必须一步一步教
+            }
+            return newObj;//因为函数外还要用,不是函数内处理完就完事了,所以要把newObj对象return出去
+        }
+
+        //当要被深克隆的对象中的一个属性的数据类型(1基本数据类型,2引用数据类型也就是对象)又是个对象时候,他又是一种堆储存了所以还需要完善
+        function clone2(obj) {
+            var newObj = {};
+            for (var p in obj) {
+                if(typeof obj[p]=='object'){
+                    newObj[p]=clone(obj[p]);  //当判断obj[p]是一个对象时,再运用这个方法clone/函数的递归应用
+                }
+                newObj[p] = obj[p];
+            }
+            return newObj;
+        }
+
+
+        //html5 JSON方法  就是改变数据类型的方法,把引用数据类型转变为基本数据类型再赋值,就没有堆储存引起的浅克隆问题了
+        var str1 = JSON.stringify(obj1);
+        var obj3 = JSON.parse(str1);
+
+
+
+    })()
+</script>
+</body>
+</html>

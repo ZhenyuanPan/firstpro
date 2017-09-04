@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    (function () {
+
+        var oImg = new Image();
+
+        oImg.onload=function () {
+            console.log(oImg.offsetWidth);
+            loadSuccess()
+        };
+        oImg.src=""; /*兼容标准浏览器:SRC写在ONLOAD下面*/
+        function loadSuccess() {
+            document.body.appendChild(oImg);
+
+        }
+
+
+
+    })()
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+//浏览器有同源策略不准许发送跨域请求
+//跨域情况:①不同域
+            ②主子域
+            ③端口号不同http://www.a.com:8080  | http://www.a.com:8081
+            ④协议不同 http://  |  https://
+//CDN加速 内容分发网络,用于*性能优化*这是跨域.当有src属性时可以跨域
+//跨五方式:①jsonp:json padding 原理利用script的src属性进行传值,再用函数利用函数参数把值传回来
+            get
+            post
+//         ②iframe:不推荐使用:改变dom结构,而且对搜索引擎不友好(不利于搜索引擎的解析)
+                    关键字:parent , top            也属于get方式
+//         ③服务器代理方式没有跨域(不是浏览器,没有同源)
+//         ④postMessage    post方式/html5方式
+</body>
+</html>

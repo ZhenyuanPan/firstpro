@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Title</title>
+    <style>
+        html{
+            font-size: 20px;
+        }
+        #head{
+            width: 48rem;
+            height: 10rem;
+            background: #ff6600;
+            color: #FFFFFF;
+            text-align: center;
+            line-height: 10rem;
+            margin: 0 auto;
+        }
+        #new {
+            width: 48rem;
+            margin: 0 auto;
+        }
+        #new img{
+            display: block;
+            margin: 0 auto;
+        }
+        #content {
+            width: 48rem;
+            height: 10rem;
+            margin: 0 auto;
+        }
+        #content #l{
+            background: #00A5FF;
+            float: left;
+            width: 20rem;
+            height: 10rem;
+            text-align: center;
+            display: table;
+            color: #E41256;
+        }
+        #content #r{
+            background: #CDE074;
+            float: left;
+            margin-left: 8rem;
+            width: 20rem;
+            height: 10rem;
+            text-align: center;
+            display: table;
+            color: #F9AF2A;
+        }
+        #content p{
+            display: table-cell;
+            vertical-align: middle;
+        }
+        #foot{
+            width: 48rem;
+            height: 10rem;
+            background: #48aa0d;
+            color: #FFFFFF;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 10rem;
+            clear: both;
+        }
+
+        @media (max-width: 959px) {
+            #head,#foot,#new{
+                width: 100%;
+            }
+            #new img{
+                width: 100%;
+            }
+            #content{
+                width: 100%;
+            }
+            #content #l{
+                width: 60%;
+            }
+            #content #r{
+                width: 30%;
+                margin-left: 10%;
+            }
+        }
+        @media (max-width: 479px) {
+            #content #l,#content #r{
+                width: 100%;
+                margin: 0;
+            }
+        }
+
+        /*@media (max-width: 24rem) {*/
+            /*#content #l,#content #r{*/
+                /*width: 100%;*/
+            /*}*/
+        /*}*/
+    </style>
+</head>
+<body>
+<div id="head">head</div>
+<div id="new"><img src="img/2.jpg" alt=""></div>
+<div id="content">
+    <div id="l"><p>qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe</p></div>
+    <div id="r"><p>qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe</p></div>
+</div>
+<div id="foot">foot</div>
+</body>
+</html>

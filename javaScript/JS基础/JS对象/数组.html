@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    (function () {
+        var arr = new Array(1,2,3,4);//创建了4个元素,里面有4个数组分别是1,2,3,4
+        var arr1 =new Array(2);//当只有一个数字时表示创建了该数字个元素(创建了数组的长度),但未给他们赋值
+        var arr2=[1,2,3,4];//还可以这样给arr2赋值成为数组对象
+        console.log(arr);
+        console.log(arr[0]);
+        console.log(arr.length);
+        for(var i=0;i<arr.length;i++){
+            console.log(arr[i]);
+        }
+        arr.pop();//删除并返回数组的最后一个元素
+        arr.shift();//删除并返回数组的第一个元素
+        arr.unshift();//向数组的开头添加一个或更多元素并返回新的长度
+        arr.push();//向数组的墨梅添加一个或者更多元素并返回新的长度.
+        arr.splice(index,howmany,item);//从哪开始,删除几个,添加元素.该方法返回被删除的项目
+
+        //判断是否是数组
+        arr.constructor =='Array';
+        arr instanceof Array;
+
+
+
+
+    })()
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            border: 0;
+        }
+        #left{
+            width: 400px;
+            height: 200px;
+            background: #ff6600;
+        }
+        #right{
+            height: 200px;
+            width: auto;
+            background: #00A5FF;
+            flex-grow: 1;
+        }
+        #context{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+<!--
+<div id="right"></div>
+<div id="left"></div>           //上面的没浮动的div会卡主下面浮动的div
+-->
+<div id="context">
+    <div id="left"></div>
+    <div id="right"></div>
+</div>
+
+</body>
+</html>

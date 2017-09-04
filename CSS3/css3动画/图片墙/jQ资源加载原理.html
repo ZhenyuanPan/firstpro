@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="container"></div>
+    <script>
+        (function () {
+            window.onload=function () {
+
+                oImg.src='img/1.jpg';
+                var oImg =new Image();
+                document.body.appendChild(oImg);
+                console.log(oImg.offsetWidth);
+            };/*资源加载完成后才能获取到宽度*/
+           /* 所有带src属性的对象都有onload事件*/
+           /*src必须写在onload事件后*/
+
+            (function () {
+                var oImgs=new Image();
+                oImgs.onload=function () {
+
+                };oImgs.src="img/1.jpg";
+
+
+            })()
+
+
+
+
+
+
+        })()
+    </script>
+</body>
+</html>

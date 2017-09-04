@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Title</title>
+    <style>
+        html{
+            font-size: 20px;
+        }
+        #head{
+            width: 960px;
+            height: 200px;
+            margin: 0 auto;
+            background: forestgreen;
+            color: #FFFFFF;
+            text-align: center;
+            line-height: 200px;
+        }
+        #new {
+            width: 960px;
+            height: 485px;                  /*通过计算图片的长宽比算的的高度,再利用background-size就能完成变成背景铺满设定大小的div*/
+            margin: 0 auto;
+            background: url("img/2.jpg")no-repeat;
+            background-size: cover;     /*背景保持原比例铺满整个div*/
+        }
+        #content{
+            width: 960px;
+            height: 200px;
+            margin: 0 auto;
+            background: #ffcccc;
+        }
+        #content .l,#content .r{
+            display: table;
+        }
+        #content .l p,#content .r p{
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            color: #4A4A4A;
+        }
+        #content .l{
+            width: 300px;
+            height:200px;
+            background: #00A5FF;
+        }
+        #content .r{
+            width: 600px;
+            height: 200px;
+            background: #E44072;
+            margin-left: 60px;
+        }
+        #content .l,#content .r{
+            float: left;
+        }
+        #foot{
+            width: 960px;
+            height: 200px;
+            background: #B1D410;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 200px;
+            color: #FFFFFF;
+            clear: both;      /*加上clear：both可以被其他浮动元素挤动*/
+        }
+        @media (max-width: 958px) {
+            #head,#content,#foot{
+                width: 100%;
+            }
+            #content .l{
+                width:30%;
+            }
+            #content .r{
+                width: 60%;
+                margin-left: 10%;
+            }
+            #new{
+                width: 100%;
+                height: 0;
+                padding-top:50.06% ;
+            }
+        }
+        @media (max-width: 449px) {
+            #content .l,#content .r{
+                width: 100%;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="head">head</div>
+<div id="new"></div>
+<div id="content">
+    <div class="l"><p>qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe</p></div>
+    <div class="r"><p>qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe qwe</p></div>
+</div>
+<div id="foot">foot</div>
+</body>
+</html>

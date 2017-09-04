@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            border: 0;
+        }
+        .circle,.circle::after{
+            height: 200px;
+            width: 200px;
+            border: 10px solid;
+            border-radius: 50% ;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+        .circle::after{
+            content: '';
+           top: -10px;
+            left: -10px;
+
+        }
+        .circle.blue{
+            border-color: blue;
+            top:0;
+            left: 0;
+        }
+        .circle.blue::after{
+            border-color: blue;
+            z-index: 1;
+            border-bottom-color:transparent;
+        }
+        .circle.black{
+            border-color: black;
+            top: 0;
+            left: 230px;
+        }
+        .circle.black::after{
+            border-color: black;
+            z-index:1;
+            border-left-color:transparent;
+        }
+        .circle.red{
+            border-color: red;
+            top: 0;
+            left: 460px;
+        }
+        .circle.red::after{
+            border-color: red;
+            z-index: 1;
+            border-left-color: transparent;
+        }
+        .circle.yellow{
+            border-color: yellow;
+            top: 110px;
+            left: 110px;
+        }
+        .circle.yellow::after{
+            border-color: yellow;
+        }
+        .circle.green{
+            border-color: green;
+            top: 110px;
+            left: 340px;
+        }
+        .circle.green::after{
+            border-color: green;
+            z-index: 2;
+            border-top-color: transparent;
+            border-right-color: transparent;
+        }
+
+    </style>
+</head>
+<body>
+<div class="circle blue"></div>
+<div class="circle black"></div>
+<div class="circle red"></div>
+<div class="circle yellow"></div>
+<div class="circle green"></div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    (function () {
+     /*   for(var i=0;i<5;i+=2){
+            console.log(i);
+        }*/
+        var b=0;
+        while (b<5){
+            if(b == 3){
+                continue;//结束本次循环执行下次循环,不执行++了一直卡在3，这个死循环了，
+                    // break;跳出整个循环.
+            }
+            console.log(b);
+        b++;
+    }
+        //只想输出3的方法
+//        var c=-1;
+//        while (c<5){
+//            c++;
+//            if(c == 3){
+//                continue;//结束本次循环执行下次循环,这个死循环了
+//            }
+//            console.log(c);
+//        }
+
+
+        var i=0;
+        do{
+            console.log(i);
+        }while (i<0);   //do{}while()循环一定会执行一次do
+
+
+
+    })()
+</script>
+</body>
+</html>

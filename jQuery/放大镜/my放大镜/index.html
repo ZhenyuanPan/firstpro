@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+        #small{
+            height: 400px;
+            width: 400px;
+            position: relative;
+            top: 0px;
+            left: 0px;
+            float: left;
+        }
+        #small img{
+            display: block;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+        #big{
+            height: 400px;
+            width: 400px;
+            float: left;
+            overflow: hidden;
+            display: none;
+            position: relative;
+        }
+        #big img{
+            display: block;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+        #drag{
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #CCCCCC;
+            opacity: .6;
+            filter: alpha(opacity=6);
+            display: none;
+        }
+        #mark{
+            height:100%;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top:0;
+            background: #CDE074;
+            opacity: 0;
+            filter: alpha(opacity:0);
+        }
+
+    </style>
+</head>
+<body>
+<div id="small" >
+    <img src="1.jpg" alt="">
+    <div id="drag"></div>
+    <div id="mark"></div>
+</div>
+<div id="big" >
+<img src="2.jpg" alt="">
+</div>
+<script src="../../jQ练习/jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+       $("#mark").on('mouseover',function () {
+           $("#drag").show();
+           $("#big").show();
+       }).on('mouseout',function () {
+           $("#drag").hide();
+           $("#big").hide();
+       });
+       $("#drag").innerWidth();
+        $("#drag").innerHeight();
+     /*   var w = event.pageX;
+        var t = event.pageY;
+        var dw =$("#drag").innerWidth()/2;
+        var dt =$("#drag").innerHeight()/2;*/
+        $("#small").on('mousemove',function (e) {
+            var left=e.pageX-$("#drag").innerWidth()/2;
+            var top=e.pageY-$("#drag").innerHeight()/2;
+
+            if(top<0){                          //是给设定的top和left判断,用于drag的移动
+
+               top=0;
+            }
+            if(left<0){
+                left=0;
+            }
+
+            var xMax=$("#small").innerWidth()-$("#drag").innerWidth();
+            var yMax=$("#small").innerHeight()-$("#drag").innerHeight();
+
+            if (left>xMax){
+                left=xMax
+            }
+
+            if(top>yMax){
+                top=yMax
+            }
+            $("#drag").css({top:top});
+            $("#drag").css({left:left});
+            var $l=left/xMax;
+            var $t=top/yMax;
+            var bmaxH=$("#big img").innerHeight()-$("#big").innerHeight();
+            var bmaxW=$("#big img").innerWidth()-$("#big").innerWidth();
+            $("#big img").offset({top:-(($t * bmaxH)),left:-(($l * bmaxW)-400)});       //offset基于document重新定位
+          /*  $("#big img").css({top:-bmaxH * $t});
+            $("#big img").css({left:-bmaxW * $l});*/
+           /* console.log($l);
+            console.log(bmaxW)*/
+        })
+
+    })
+</script>
+</body>
+</html>

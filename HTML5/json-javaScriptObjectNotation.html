@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--前后端数据交互的格式-->
+<script>
+    var obj={
+        name:'zhangsan',
+        age:18
+    };
+    var str = JSON.stringify(obj); /*json把一个对象转化成字符串*/
+
+    var obj3 = JSON.parse(str);/*把一个字符串转化成对象*/
+   /* 可以用json校验网站*/
+   var a=5;
+   var b=a;
+   a =6;
+</script>
+</body>
+</html>

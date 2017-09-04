@@ -1,0 +1,223 @@
+#contWidth{
+    width: 990px;
+    background: #ececec;
+    position: relative;
+    margin: 0 auto;
+    z-index: 1;            /*!!!用z-index可以用调整定位元素的显示级别,数值越高里我们面前越近*/
+}
+#inputSearch{
+    border: 1px solid #BABEBF;
+    color: #999999;
+    font-size: 14px;
+    height: 17px;
+    padding: 3px 6px 5px 6px;
+    width: 200px;
+    position: absolute;
+    top: 20px;
+    left: 170px;
+}
+#nav.bgChange_0{
+    overflow: hidden;                              /*o：h与p：a不能何用，p：a会脱离文档流*/
+    background-color: #4565A9;
+    top: 68px;
+    left: 0;
+    height: 37px;
+    line-height: 37px;
+}
+#nav.bgChange_1{
+    overflow: hidden;                              /*o：h与p：a不能何用，p：a会脱离文档流*/
+    background-color: #BA3AD8;
+    top: 68px;
+    left: 0;
+    height: 37px;
+    line-height: 37px;
+}
+#nav.bgChange_2{
+    overflow: hidden;                              /*o：h与p：a不能何用，p：a会脱离文档流*/
+    background-color: #E41256;
+    top: 68px;
+    left: 0;
+    height: 37px;
+    line-height: 37px;
+}
+#nav.bgChange_3{
+    overflow: hidden;                              /*o：h与p：a不能何用，p：a会脱离文档流*/
+    background-color: #09BACB;
+    top: 68px;
+    left: 0;
+    height: 37px;
+    line-height: 37px;
+}
+#nav.bgChange_4{
+    overflow: hidden;                              /*o：h与p：a不能何用，p：a会脱离文档流*/
+    background-color: #F8B133;
+    top: 68px;
+    left: 0;
+    height: 37px;
+    line-height: 37px;
+}
+#nav.bgChange_5{
+    overflow: hidden;                              /*o：h与p：a不能何用，p：a会脱离文档流*/
+    background-color: #B8D62B;
+    top: 68px;
+    left: 0;
+    height: 37px;
+    line-height: 37px;
+}
+#nav .subItem{
+    background: gainsboro;
+}
+#nav .nav li{
+    float: left;
+    margin-left: 25px;
+}
+#nav .nav li>a{
+    color: white;
+    size: 12px;
+    font-weight: 400;
+}
+#nav .nav li .jnNav{
+    display: none;
+    position: absolute;
+    overflow: hidden;
+
+}
+
+#skin{
+    float: right;
+    margin: 10px;
+    padding: 4px;
+    width: 120px;
+
+}
+
+#skin li {
+    float: left;
+    margin-right: 4px;
+    overflow: hidden;
+}
+#skin span{
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: url("../images/theme.gif")no-repeat;
+}
+#skin_0 span{
+
+    background-position:  0 0;
+}
+#skin_1 span{
+
+    background-position: -100px 0;
+}
+#skin_2 span{
+
+   background-position:  -80px 0;
+}
+#skin_3 span{
+  background-position: -60px 0;
+}
+#skin_4 span{
+   background-position: -40px 0;
+}
+#skin_5 span{
+    background-position: -20px 0;
+}
+#skin_0 span.selected{
+    background-position: 0 -15px;
+}
+#skin_1 span.selected{
+    background-position: -100px -15px;
+}
+#skin_2 span.selected{
+    background-position: -80px -15px;
+}
+#skin_3 span.selected{
+    background-position: -60px -15px;
+}
+#skin_4 span.selected{
+    background-position: -40px -15px;
+}
+#skin_5 span.selected{
+    background-position: -20px -15px;
+}
+/*
+?为什么在#skin li里设置bg不好使
+*/
+
+/*header-end*/
+
+#janaShop{
+    margin: 10px auto;
+    width: 990px;
+    overflow: hidden;
+}
+.jnlog{
+    float: left;                                       /*div是块级元素,不给浮动的话就会上下排布*/
+    margin-top: 10px;
+    width: 187px;
+}
+.jnlog>h2{
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    font-size: 12px;
+    text-indent: 13px;
+    background-color: #6E6E6E;
+}
+
+.jnInfo{
+    border: 1px solid #6E6E6E;
+    padding: 5px 10px 0 10px;
+}
+.jnInfo>ul{
+    margin: 0 2px 8px 2px;
+    height: 96px;
+    width: 161px;
+}
+
+.jnInfo>ul>li{
+    float: right;
+    height: 24px;
+    width: 79px;
+}
+.imgRoll{
+    right:0;
+    height: 321px;
+    overflow: hidden;                   /*没有高度内容不能放到里面*/
+    position: relative;               /*//相对定位，相对于自己当前位置*/
+    margin: 10px 10px 10px 10px;
+    left: 10px;
+}
+.imgRoll img{
+    position: absolute;
+    height: 321px;                      /*没有高度内容不能放到里面*/
+    display: none;
+
+}
+.imgRoll img.imgSelected{
+    display: block; /* IMG是行内元素*/
+}
+
+.imgRoll .text{
+    overflow: hidden;
+    float: left;
+    position: absolute;
+    top: 279px;
+    opacity: 0.7;
+
+}
+.imgRoll .text a{
+    background: #444444;
+    color: #FFFFFF;
+    display: inline-block;
+    height: 30px;
+    overflow: hidden;
+    padding: 5px 15px;
+    text-align: center;
+    width: 70px;
+
+}
+.aSelected{
+    background: cyan;
+}
