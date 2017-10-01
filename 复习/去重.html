@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var a = 'HelloWorldJavascript';
+    var arr = new Array(3);
+    arr[0] = a.slice(0,5);
+    arr[1] = a.slice(5,10);
+    arr[2] = a.slice(10,22);
+    document.write(arr.join("!"));
+    var b =  'Hello World Javascript';
+    var arr2 =[b.split(" ")];
+    document.write(arr2.join(","));
+
+
+    var arr3 = [1,1,1];
+    var newArr = [];
+    for(var i=0;i<arr3.length;i++){
+        if(newArr.indexOf(arr3[i]) == -1){
+            newArr.push(arr3[i]);
+        }
+    }
+    console.log(newArr);
+</script>
+</body>
+</html>

@@ -6,9 +6,9 @@ $(function () {
     var $appWatchDown =$("#apple-watch .app-watch-down");
     var $appWatchDownChange = $('#apple-watch .app-watch-down-change');
 
-    var $html = $("html:not(.dialog-container)");/*??为啥不行啊??*/
-
+    var $html = $(":not(.dialog-container)");
     var $body = $('#head,#adv,#rewards,#app,#streamer,#mosaic,#wsg,#apple-watch,#collection,#reserve,#footer');
+
     var $head = $("#head");
     var $menu = $("#head .menu-small");
     var $menuBig = $("#head .menu-big");
@@ -59,14 +59,17 @@ $(function () {
             }
     });
 
+
     $dialogMask.on('mousewheel',function () {
         dialogMainHide();
         $dialogMask.css({display:'none'});
     });
     
     $menu.on('click',function () {
-        $dialogMask.css({background:"rgba(115, 115, 115, 0.5)",position: 'fixed', top: '0', bottom: '0', left: '0', right: '0',zIndex:'99',display:'block'})
+        $dialogMask.css({background:"rgba(115, 115, 115, 0.5)",position: 'fixed', top: '0', bottom: '0', left: '0', right: '0',zIndex:'99',display:'block'});
         $main.css({width:'auto',display:'block'});
+        $(window).off('scroll');
+
     });
     function dialogMainHide() {
         var totalWidth = $main.innerWidth();

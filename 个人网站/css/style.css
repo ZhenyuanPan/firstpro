@@ -1,0 +1,241 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+li{
+    list-style-type: none;
+}
+
+body {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom:0;
+    perspective: 1000px;
+    -webkit-perspective-origin: 50% 50%;
+    background-image: url("../img/bodyBackground1.jpg");
+    background-size:300%,cover ;
+    background-position:center;
+    background-attachment:fixed;
+    background-repeat:no-repeat;
+}
+#wrapper{
+    width: 100%;
+    height:100%;
+}
+
+/*body:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right:0;
+    top: 0;
+    bottom:0;
+    z-index: -1;
+    background-image: url("../img/bodyBackground1.jpg");
+    background-size:cover ;
+    background-position:center;
+    background-attachment:fixed;
+    background-repeat:no-repeat;
+   !* animation: changeBgi 2s linear infinite;         !* 这伪对象永远遮罩。用zindex调整*!*!
+
+}*/
+/*@keyframes changeBgi {
+    33.3333%{
+        background-size: 140%;
+    }
+    33.3333%{
+        background-size: 100%;
+    }
+    33.3333%{
+        background-size: 140%;
+    }
+}*/
+.drop {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+}
+.snow {
+    height: 8px;
+    width: 8px;
+    z-index: -1;
+    border-radius: 100%;
+    background-color: #FFF;
+    box-shadow: 0 0 10px #FFF
+}
+.animate {
+    animation: falling 3.5s infinite ease-in;
+}
+@keyframes falling {
+    0% {top: 0; opacity: 1;}
+    100% {top: 500px; opacity: 0}
+}
+.changePageIconLeft{
+    position: absolute;
+    top:45%;
+    height: 60px;
+    width: 60px;
+    display: none;
+    z-index: 3;
+}
+.changePageIconRight{
+    position: absolute;
+    right: 0;
+    top: 45%;
+    height: 60px;
+    width: 60px;
+    display: none;
+    z-index: 3;
+}
+.right{
+    display: block;
+    width: 50px;
+    height: 5px;
+    background: #FFFFFF;
+    margin: 8px auto;
+}
+.right.first{
+    transform: translateX(-10px) rotate(-45deg);
+    width: 40px;
+}
+.right.last{
+    transform: translateX(-10px) rotate(45deg);
+    width: 40px;
+}
+.left{
+    display: block;
+    width: 50px;
+    height: 5px;
+    background: #FFFFFF;
+    margin: 8px auto;
+}
+.left.first{
+    transform: translateX(10px) rotate(45deg);
+    width: 40px;
+}
+.left.last{
+    transform: translateX(10px) rotate(-45deg);
+    width: 40px;
+
+}
+#context{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+    animation:rotate 2s linear infinite;
+}
+#wrapper .cube{
+    height: 400px;
+    width: 300px;
+    position: absolute;
+    background: #f7f5d1;
+    opacity: 0;
+    display: none;
+}
+.cube.q{
+    transform: rotateY(180deg) translateZ(260px);
+
+}
+.cube.w{
+    transform: rotateY(60deg) translateZ(260px);
+
+}
+.cube.e{
+    transform: rotateY(120deg) translateZ(260px);
+
+}
+.cube.t{
+    transform: rotateY(240deg) translateZ(260px);
+
+}
+.cube.y{
+    transform:rotateY(300deg) translateZ(260px);
+
+}
+.cube.c{
+    transform:rotateY(360deg) translateZ(260px);
+}
+.back{
+    opacity: 0.4;
+}
+.side{
+    opacity: 0.4;
+}
+.backSide{
+    opacity: 0.4;
+}
+.front{
+    opacity: 1;
+}
+
+.backToBegin{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 40px;
+    opacity: 0;
+    display: none;
+}
+.beginToShow{
+    color: #FFFFFF;
+    font-size: 80px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    display: none;
+}
+.beginToShow.my{
+
+}
+.beginToShow.name{
+}
+
+
+
+
+
+@media (max-width: 958px) {
+    .right{
+        display: block;
+        width: 30px;
+        height: 5px;
+        background: #FFFFFF;
+        margin: 2px auto;
+    }
+    .right.first{
+        transform: translateX(-10px) rotate(-45deg);
+        width: 20px;
+    }
+    .right.last{
+        transform: translateX(-10px) rotate(45deg);
+        width: 20px;
+    }
+    .left{
+        display: block;
+        width: 30px;
+        height: 5px;
+        background: #FFFFFF;
+        margin: 1px auto;
+    }
+    .left.first{
+        transform: translateX(10px) rotate(45deg);
+        width: 20px;
+    }
+    .left.last{
+        transform: translateX(10px) rotate(-45deg);
+        width: 20px;
+
+    }
+}
